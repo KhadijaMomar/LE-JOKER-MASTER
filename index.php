@@ -2,17 +2,17 @@
     $version = phpVersion();
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php $lang[0]?>">
 <?php
     include_once __DIR__ .'/template/header.inc.php';
-    
+    include_once __DIR__ .'/controller/baseController.php';
 ?>
 
 <body>
     <!-- En-tête de la page -->
     <header>
         <h1>
-            <span aria-hidden="true">🤡</span>Le Joker
+            <span aria-hidden="true">🤡 Le joker
         </h1>
     </header>
 
