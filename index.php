@@ -1,18 +1,13 @@
+<?php
+    $version = phpVersion();
+?>
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="En 1981, à Gotham City, Arthur Fleck, un comédien raté, sombre dans la folie
-    après une série de tragédies et d'humiliations...">
-    <title>Le Joker - Film</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+<?php
+    include_once __DIR__ .'/template/header.inc.php';
+    
+?>
+
 <body>
     <!-- En-tête de la page -->
     <header>
@@ -25,7 +20,8 @@
     <main>
         <!-- Section Affiche du film -->
         <section class="movie-poster">
-            <img src="https://wave.fr/images/1916/07/joker-3-bonnes-raisons-aller-voir-film-cinema-aujourdhui.jpg" alt="Affiche du film Le Joker">
+            <img src="https://wave.fr/images/1916/07/joker-3-bonnes-raisons-aller-voir-film-cinema-aujourdhui.jpg"
+                alt="Affiche du film Le Joker">
         </section>
 
         <!-- Section Storyline -->
@@ -35,7 +31,7 @@
                 En 1981, à Gotham City, Arthur Fleck, un comédien raté, sombre dans la folie
                 après une série de tragédies et d'humiliations. Incapable de se connecter aux
                 autres et désespéré par l'absence de sens dans sa vie, Arthur se transforme
-                progressivement en Joker, une figure de chaos et de violence, qui devient 
+                progressivement en Joker, une figure de chaos et de violence, qui devient
                 une icône pour les citoyens les plus marginalisés.
             </p>
         </section>
@@ -68,8 +64,9 @@
     </main>
 
     <!-- Pied de page -->
-    <footer>
-        <p>© 2024 - Informations sur le film Le Joker</p>
-    </footer>
+    <?php
+        include_once __DIR__ .'/template/footer.inc.php';
+    ?>
 </body>
+
 </html>
