@@ -6,6 +6,7 @@
 <?php
     include_once __DIR__ .'/template/header.inc.php';
     include_once __DIR__ .'/controller/baseController.php';
+    
 ?>
 
 <body>
@@ -22,8 +23,7 @@
         <section class="movie-poster">
             <img src="https://wave.fr/images/1916/07/joker-3-bonnes-raisons-aller-voir-film-cinema-aujourdhui.jpg"
                 alt="Affiche du film Le Joker">
-        </section>
-
+        </section>  
         <!-- Section Storyline -->
         <section class="storyline">
         <?php
@@ -50,18 +50,10 @@
                 <li><strong>Frances Conroy</strong> dans le rôle de Penny Fleck</li>
             </ul> -->
                 <?php
-                    $actors = $instance->actorsInfo();
+                     include_once __DIR__ .'/model/model.php';
+                    //$actors = $instance->actorsInfo();
                     ?>
-                    
-                        <?php foreach($actors as $role):?>
-                            <ul>
-                                <li>
-                                    <strong><?= $role['prenom']." ".$role['nom'] ?>
-                                    </strong> <?= $role['role'] ?>
-                                </li>
-                            
-                            </ul>
-                            <?php endforeach;?>
+                 
         </section>
 
         <!-- Section Date de Sortie -->
@@ -93,3 +85,4 @@
 </body>
 
 </html>
+
